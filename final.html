@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HTML & CSS Assignment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+  </head>
+<body>
+ <div class="background" id="background1">
+    <nav>
+        <ul class="unordered">
+            <a href="#">Home</a>
+            <a href="#">Order</a>
+            <a href="#">Food</a>
+            <a href="#">Restaurant</a>
+            <a href="#">Testimonials</a>
+            <a href="#">Contact Us</a>
+            <a href="#"><img class="menu" src="menu-bar.png" alt="menu"></a>
+        </ul>
+    </nav>
+    <div class="food-container">
+        <div class="sub-container">
+            <h1 class="heading">LOREM IPSUM</h1>
+            <p class="paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+                id est vitae dolor rhoncus tristique. Maecenas metus quam,
+                euismod lorem in, sollicitudin viverra eros. Donec
+                dictum luctus quam ut tristique. Curabitur nec faucibus purus.
+                Quisque congue sem nec justo mollis, in tincidunt erat pretium.
+                Sed pulvinar, massa ac porta viverra.
+            </p>
+            <button id="clickMeButton" onclick="getNextPage()">
+                Click Me
+            </button>
+        </div>
+        <div class="image-container">
+        </div>
+    </div>
+</div> 
+  <div id="nextPage" class="display-none">
+   <div class="background-next">
+    <div class="image-cont">
+        <div class="small-container">
+          <img class="image1" src="pexels-rachel-claire-6752433.jpg"/>
+          <img class="image1" src="pexels-eva-bronzini-6141651.jpg"/>
+      </div>
+      <div class="small-container">
+        <img class="image2" src="pexels-mister-mister-3434523.jpg"/>
+      </div>
+     </div>
+     <div class="text-container">
+      <p class="para2">LOREM IPSUM</p>
+      <h1 class="heading2">LOREM IPSUM SET ADEMIR</h1>
+      <button class="arrow-button" id="button2" onclick="previousPage()">
+        <div class="center"> 
+          Click
+          <span class="arrow-image"><img src="icons8-arrow-30.png"></span>
+      </div></button>
+  </div>
+</div>  
+</div>
+
+  <script type="text/javascript">
+        let buttonEl = document.getElementById("clickMeButton")
+        let button2El = document.getElementById("button2")
+        let nextPageEl = document.getElementById("nextPage")
+        let backgroundEl = document.getElementById("background1")
+        
+        function getNextPage(){
+           nextPageEl.classList.remove("display-none")
+           backgroundEl.classList.add("display-none")
+        }
+
+        function previousPage(){
+          nextPageEl.classList.add("display-none")
+           backgroundEl.classList.remove("display-none")
+        }
+  </script>  
+</body>
+
+</html>
